@@ -1,0 +1,11 @@
+class Solution {
+    public int reverse(int x) {
+        long pro=0;
+        while(x!=0){
+            pro=pro*10+x%10;
+            x=x/10;
+        }
+        if(pro>2147483647l||pro<-2147483648l){return 0;}
+        else{return (int)pro;}
+    }
+}
