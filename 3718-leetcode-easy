@@ -1,0 +1,14 @@
+import java.util.*;
+import java.util.stream.Collectors;
+class Solution {
+    public int missingMultiple(int[] nums, int k) {
+        List<Integer> list=new ArrayList<>();
+        list=Arrays.stream(nums).filter(each->each%k==0).boxed().collect(Collectors.toList());
+        for(int i=1;;i++) {
+            int x=k*i;
+            if (!list.contains(x)) {
+                return x;
+            }
+        }
+    }
+}
