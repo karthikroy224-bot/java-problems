@@ -1,0 +1,10 @@
+class Solution {
+    public boolean uniformArray(int[] nums1) {
+        return true;
+    }
+}
+
+// all even or all odd  no problem 
+//if at least one number is odd or even 
+//we can subract every element with that element then we get odd only
+//Math.abs(even-odd)=odd
